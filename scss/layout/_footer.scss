@@ -1,0 +1,58 @@
+.footer {
+	background-color: black;
+	width: 100%;
+	text-transform: uppercase;
+
+	.footer-list {
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		height: 60px;
+
+		@include breakpoint(alpha){
+			height: 50px;
+		}
+
+		@include breakpoint(gamma){
+			height: initial;
+			display: block;
+		}
+
+		li {
+			padding: 0 12px;
+			
+			@include breakpoint(gamma){
+				text-align: center;
+				display: block;
+			}
+
+			&.active{
+				text-decoration: underline;
+			}
+		}
+
+		a {
+			font-size: 21px;
+
+			@include breakpoint(alpha){
+				font-size: 18px;
+			}
+
+			@include breakpoint(beta){
+				font-size: 16px;
+			}
+
+			@include breakpoint(gamma){
+				font-size: 14px;
+			}
+
+			@include breakpoint(delta){
+				font-size: 12px;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

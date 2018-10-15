@@ -1,0 +1,119 @@
+@import 'font-family';
+@import 'color';
+@import 'mixin';
+@import 'function';
+
+
+html { 
+  //this sets the default size for 1 rem to be 10px
+  font-size: 62.5%; 
+} 
+
+
+body {
+  font: $font-size $font-stack;
+  color: $color-black;
+  font-weight: $font-weight;
+  position: relative;
+}
+
+.container {
+  max-width: 1300px;
+  width: auto;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.row{
+  margin: 0 !important;
+}
+
+.clr {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+
+}
+
+button {
+  border: none;
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background: none;
+}
+
+//For placeholder pseudoelement you can only style these properties: 
+//opacity, font properties, color, background properties,
+//word-spacing, letter-spacing, text-decoration, vertical-align,
+//text-transform, line-height, text-indent 
+
+input {
+  border: none;
+  
+  &:focus, &:active {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+  
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+   
+  }
+
+  &:-ms-input-placeholder {
+    
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: 0;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}

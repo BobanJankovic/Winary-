@@ -1,0 +1,150 @@
+//Bootstrap is using >= 1200px for large desktops
+//                   >= 992px  for desktops
+//                   >= 768px  for tablets
+//                   <  768px  for phones
+
+$alpha:   1280px;
+$beta:    960px;
+$gamma:   768px;
+$delta:   480px;
+$epsilon: 360px; 
+
+// media queries
+// breakpoints are 
+@mixin breakpoint($point) {
+  
+  @if $point == alpha {
+    @media ( max-width: $alpha )  { @content; }
+  }
+
+  @else if $point == beta {
+    @media ( max-width: $beta )   { @content; }
+  }
+
+  @else if $point == gamma {
+    @media ( max-width: $gamma )   { @content; }
+  }
+
+  @else if $point == delta {
+    @media ( max-width: $delta )   { @content; }
+  }
+
+  @else if $point == epsilon {
+    @media ( max-width: $epsilon )   { @content; }
+  }
+
+}
+
+@mixin background-size($value) {
+  -webkit-background-size: $value;
+  -moz-background-size:    $value;
+  -o-background-size:      $value;
+  -ms-background-size:     $value;
+  background-size:         $value;
+}
+
+// box-shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+// border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// transition
+@mixin transition($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+          transition: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform:    $value;
+  -o-transform:      $value;
+  -ms-transform:     $value;
+  transform:         $value;
+}
+
+
+// gradient
+@mixin gradient($start-color, $end-color) {
+  background: $end-color;
+  background: -moz-linear-gradient(top, $start-color 0%, $end-color 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color));
+  background: -webkit-linear-gradient(top, $start-color 0%,$end-color 100%);
+  background: -o-linear-gradient(top, $start-color 0%,$end-color 100%);
+  background: -ms-linear-gradient(top, $start-color 0%,$end-color 100%);
+  background: linear-gradient(top bottom, $start-color 0%,$end-color 100%);
+}
+
+
+
+// center the element horizontal, vertical or both(default)
+// !IMPORTANT: You must put position:relative on the parent element!
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  } @else if ($horizontal) {
+    left: 50%;
+    @include transform(translate(-50%, 0));
+  } @else if ($vertical) {
+    top: 50%;
+    @include transform(translate(0, -50%));
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}

@@ -1,0 +1,1750 @@
+h2 {
+	font-size: 50px;
+	color: $dark-blue;
+	font-family: 'Anton-Regular';
+
+	@include breakpoint(alpha){
+		font-size: 40px;
+	}
+	@include breakpoint(beta){
+		font-size: 35px;
+	}
+	@include breakpoint(gamma){
+		font-size: 27px;
+	}
+	@include breakpoint(delta){
+		font-size: 25px;
+	}
+}
+
+h3 {
+	font-size: 30px;
+	color: $color-gold;
+	font-family: 'Montserrat-Regular';
+
+	@include breakpoint(alpha){
+		font-size: 25px;
+	}
+	@include breakpoint(beta){
+		font-size: 22px;
+	}
+	@include breakpoint(gamma){
+		font-size: 20px;
+	}
+	@include breakpoint(delta){
+		font-size: 18px;
+	}
+}
+
+section {
+	text-align: center;
+}
+
+.home-slider {
+	.swiper-slide {
+		min-height: 700px;
+		@include breakpoint(alpha){
+			min-height: 500px;
+		}
+		@include breakpoint(gamma){
+			min-height: 450px;
+		}
+		@include breakpoint(delta){
+			min-height: 400px;
+		}
+		&.slide1{
+			background: url('../../i/content/vino/vino1.jpg') center center no-repeat;
+			@include background-size(cover);
+		}
+		&.slide2{
+			background: url('../../i/content/vino/vino2.jpg') center center no-repeat;
+			@include background-size(cover);
+		}
+		&.slide3{
+			background: url('../../i/content/vino/vino3.jpg') center center no-repeat;
+			@include background-size(cover);
+		}
+		&.story-slide1{
+			background: url('../../i/content/vino/vino4.jpg') center center no-repeat;
+			@include background-size(cover);
+		}
+		&.story-slide2{
+			background: url('../../i/content/vino/vino5.jpg') center center no-repeat;
+			@include background-size(cover);
+		}
+
+
+
+		.slide-text{
+			width: 90%;
+			text-align: center;
+			h3{
+				font-family: 'Montserrat-Regular';
+				font-size: 29.17px;
+				margin-bottom: 20px;
+				color: white;
+				@include breakpoint(alpha){
+					font-size: 25px;
+					margin-bottom: 15px;
+				}
+				@include breakpoint(gamma){
+					font-size: 20px;
+					margin-bottom: 15px;
+				}
+				@include breakpoint(delta){
+					font-size: 18px;
+					margin-bottom: 10px;
+				}
+			}
+
+			h1{
+				font-size: 108px;
+				font-family: 'Anton-Regular';
+				text-shadow: 2px 7px 30px $color-black;
+				margin: 0 auto;
+				margin-bottom: 45px;
+				max-width: 700px;
+				color: $color-white;
+
+				@include breakpoint(alpha){
+					font-size: 80px;
+					margin-bottom: 35px;
+				}
+				@include breakpoint(beta){
+					font-size: 70px;
+					margin-bottom: 30px;
+				}
+				@include breakpoint(gamma){
+					font-size: 65px;
+				}
+				@include breakpoint(delta){
+					font-size: 50px;
+					margin-bottom: 10px;
+				}
+			}
+
+			button{
+				font-weight: 600;
+			}
+		}
+	}
+
+	.swiper-pagination {
+		bottom: 70px;
+		@include breakpoint(alpha){
+			bottom: 40px;			
+		}
+		@include breakpoint(gamma){
+			bottom: 30px;		
+		}
+		@include breakpoint(delta){
+			bottom: 20px;			
+		}
+	}
+
+	.swiper-pagination-bullet {
+		@include border-radius(0);
+		width: 18px;
+		height: 18px;
+		opacity: 1;
+		background: $color-white;
+
+		&.swiper-pagination-bullet-active {
+			border: 2px solid $color-white;
+			background: none;
+		}
+	}
+}
+
+.home-short-about {
+	padding: 130px 0;
+
+	@include breakpoint(alpha){
+		padding: 100px 0;
+	}
+
+	@include breakpoint(beta){
+		padding: 80px 0;
+	}
+
+	@include breakpoint(gamma){
+		padding: 60px 0;
+	}
+
+	@include breakpoint(delta){
+		padding: 40px 0;
+	}
+
+	h2 {
+		margin-bottom: 60px;
+
+		@include breakpoint(alpha){
+			margin-bottom: 40px;
+		}
+	
+		@include breakpoint(beta){
+			margin-bottom: 30px;
+		}
+	
+		@include breakpoint(gamma){
+			margin-bottom: 25px;
+		}
+	
+		@include breakpoint(delta){
+			margin-bottom: 20px;
+		}
+	}
+	p{
+		font-size: 29.17px;
+		@include breakpoint(alpha){
+			font-size: 25px;
+		}
+	
+		@include breakpoint(beta){
+			font-size: 22px;
+		}
+	
+		@include breakpoint(gamma){
+			font-size: 18px;
+		}
+	
+		@include breakpoint(delta){
+			font-size: 14px;
+		}
+	}
+
+	.signature-col{
+		img{
+			@include breakpoint(gamma){
+				height: 140px;
+			}
+			@include breakpoint(delta){
+				height: 120px;
+			}
+		}
+	}
+}
+
+.border-box {
+	display: inline-block;
+	border: 2px solid $dark-blue;
+	margin: 0 auto;
+	padding: 4px;
+	text-transform: uppercase;
+
+	@include breakpoint(alpha){
+		padding: 3px;
+	}
+
+	@include breakpoint(gamma){
+		padding: 2px;
+	}
+
+	&.gold-border{
+		border: 2px solid $color-gold;
+	}
+
+	&.border-box--lg {
+		border: 3px solid $color-white;
+		padding: 5px;
+	}
+
+	&.border-box--center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate3d(-50%, -50%, 0));
+	}
+
+	.border-box__in {
+		display: block;
+		background-color: $dark-blue;
+		color: $color-white;
+		height: 67px;
+		line-height: 67px;
+		width: 245px;
+		font-size: 35px;
+
+		@include breakpoint(alpha){
+			height: 50px;
+			line-height: 50px;
+			width: 200px;
+			font-size: 27px;
+		}
+	
+		@include breakpoint(beta){
+			height: 40px;
+			line-height: 40px;
+			width: 180px;
+			font-size: 25px;
+		}
+
+		@include breakpoint(gamma){
+			height: 40px;
+			line-height: 40px;
+			width: 150px;
+			font-size: 22px;
+		}
+
+		@include breakpoint(delta){
+			width: 120px;
+			font-size: 18px;
+		}
+
+		&.bg-gold{
+			background-color: $color-gold;
+		}
+
+		&.border-box__in--lg {
+			height: 80px;
+			line-height: 80px;
+			width: 180px;
+			background-color: $color-white;
+
+			@include breakpoint(alpha){
+				height: 50px;
+				line-height: 50px;
+				width: 200px;
+				font-size: 27px;
+			}
+		
+			@include breakpoint(beta){
+				height: 40px;
+				line-height: 40px;
+				width: 160px;
+				font-size: 25px;
+			}
+	
+			@include breakpoint(gamma){
+				height: 40px;
+				line-height: 40px;
+				width: 140px;
+			}
+	
+			@include breakpoint(delta){
+				width: 120px;
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	&.grey-overlay{
+		background-color: $mid-grey;
+		opacity: 0.5;
+	}
+}
+
+
+.news-and-events {
+	.row,
+	[class*=col-] {
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+
+	.home-img-box {
+		position: relative;
+		width: 100%;
+		height: 720px;
+
+		@include breakpoint(alpha){
+			height: 570px;
+		}
+
+		@include breakpoint(beta){
+			height: 450px;
+		}
+
+		@include breakpoint(gamma){
+			height: 400px;
+		}
+
+		@include breakpoint(delta){
+			height: 350px;
+		}
+
+		&.box-lg{
+			height: 1000px;
+
+			@include breakpoint(alpha){
+				height: 850px;
+			}
+	
+			@include breakpoint(beta){
+				height: 650px;
+			}
+	
+			@include breakpoint(gamma){
+				height: 550px;
+			}
+	
+			@include breakpoint(delta){
+				height: 450px;
+			}
+		}
+
+		&.event-box {
+			background: url('../../i/content/vino/vino6.jpg') no-repeat center center;
+			@include background-size(cover);
+		}
+
+		&.news-box {
+			background: url('../../i/content/vino/vino7.jpeg') no-repeat center center;
+			@include background-size(cover);
+		}
+
+		&.story-box1 {
+			background: url('../../i/content/vino/vino3.jpg') no-repeat center center;
+			@include background-size(cover);
+		}
+
+		&.story-box2 {
+			background: url('../../i/content/vino/vino4.jpg') no-repeat center center;
+			@include background-size(cover);
+		}
+
+		&.visit-img1 {
+			background: url('../../i/content/vino/vino1.jpg') no-repeat center center;
+			@include background-size(cover);
+		}
+
+		&.visit-img2 {
+			background: url('../../i/content/vino/vino2.jpg') no-repeat center center;
+			@include background-size(cover);
+		}
+
+		&.map-box {
+			background: url('../../i/content/vino/vino6.jpg') no-repeat center center;
+			@include background-size(cover);
+		}
+
+		a {
+			font-size: 50px;
+			color: $dark-brown;
+			font-family: 'Anton-Regular';
+
+			@include breakpoint(alpha){
+				font-size: 40px;
+			}
+	
+			@include breakpoint(beta){
+				font-size: 35px;
+			}
+	
+			@include breakpoint(gamma){
+				font-size: 30px;
+			}
+	
+			@include breakpoint(delta){
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+.newsletter {
+	background-color: $color-silver;
+	padding: 100px 0;
+
+	@include breakpoint(alpha){
+		padding: 80px 0;
+	}
+
+	@include breakpoint(beta){
+		padding: 70px 0;
+	}
+
+	@include breakpoint(gamma){
+		padding: 60px 0;
+	}
+
+	@include breakpoint(delta){
+		padding: 40px 0;
+	}
+
+	h2 {
+		margin-bottom: 15px;
+	}
+
+	p {
+		margin-bottom: 75px;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+			margin-bottom: 60px;
+		}
+	
+		@include breakpoint(beta){
+			font-size: 22px;
+			margin-bottom: 40px;
+		}
+	
+		@include breakpoint(gamma){
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	
+		@include breakpoint(delta){
+			font-size: 17px;
+			margin-bottom: 25px;
+		}
+	}
+
+	input {
+		@include box-shadow(inset 6px, 6px, 12px, 0px, #b7b7b7);
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		font-size: 25px;
+		text-align: center;
+		margin-bottom: 80px;
+
+		@include breakpoint(alpha){
+			font-size: 23px;
+			margin-bottom: 50px;
+			height: 50px;
+			line-height: 50px;
+		}
+	
+		@include breakpoint(beta){
+			font-size: 22px;
+			margin-bottom: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+	
+		@include breakpoint(gamma){
+			font-size: 20px;
+			margin-bottom: 30px;
+			height: 30px;
+			line-height: 30px;
+		}
+	
+		@include breakpoint(delta){
+			font-size: 17px;
+			margin-bottom: 25px;
+			height: 25px;
+			line-height: 25px;
+		}
+	}
+}
+
+.centered-box{
+	@include centerer(true, true);
+
+	&.small-top{
+		@include transform(translate(-50%, 0));
+		top: 110px;
+		@include breakpoint(alpha){
+			top: 90px;
+		}
+		@include breakpoint(beta){
+			top: 75px;
+		}
+		@include breakpoint(gamma){
+			top: 65px;
+		}
+		@include breakpoint(delta){
+			top: 80px;
+		}
+	}
+}
+
+.page-banner{
+	min-height: 515px;	
+
+	@include breakpoint(alpha){
+		min-height: 440px;
+	}
+	@include breakpoint(beta){
+		min-height: 380px;
+	}
+	@include breakpoint(gamma){
+		min-height: 350px;
+	}
+	@include breakpoint(delta){
+		min-height: 300px;
+	}
+
+	&.our-beers{
+		background: url('../../i/content/vino/banervino1.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+
+	&.beer-kits{
+		background: url('../../i/content/vino/banervino2.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+
+	&.events{
+		background: url('../../i/content/vino/banervino3.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+
+	&.news{
+		background: url('../../i/content/vino/banervino3.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+
+	&.shop{
+		background: url('../../i/content/vino/banervino1.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+
+	&.contact-us{
+		background: url('../../i/content/vino/banervino2.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+
+	&.terms{
+		background: url('../../i/content/vino/banervino3.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+
+	&.privacy{
+		background: url('../../i/content/vino/banervino2.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+}
+.brendslika {
+	width:200px;
+	height: 150px;
+}
+.small-padding{
+	padding: 60px 0;
+
+	@include breakpoint(alpha){
+		padding: 50px 0;
+	}
+	@include breakpoint(beta){
+		padding: 40px 0;
+	}
+	@include breakpoint(gamma){
+		padding: 30px 0;
+	}
+	@include breakpoint(delta){
+		padding: 20px 0;
+	}
+}
+
+.container-md{
+	max-width: 1450px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.container-lg{
+	max-width: 1550px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.container-sm{
+	max-width: 1000px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.bg-white{
+	background-color: $color-white;
+}
+
+.bg-light-blue{
+	background-color: $light-blue;
+}
+
+.tab-pills{
+	margin: 45px 0;
+
+	@include breakpoint(alpha){
+		margin: 35px 0;
+	}
+	@include breakpoint(beta){
+		margin: 25px 0;
+	}
+	@include breakpoint(gamma){
+		margin: 20px 0;
+	}
+	@include breakpoint(delta){
+		margin: 17px 0;
+	}
+
+	span,a{
+		font-family: 'Anton-Regular';
+		font-size: 20.83px;
+		margin: 0 1px;
+		text-transform: uppercase;
+
+		@include breakpoint(alpha){
+			font-size: 18px;
+		}
+		@include breakpoint(beta){
+			font-size: 16px;
+		}
+		@include breakpoint(gamma){
+			font-size: 14px;
+		}
+		@include breakpoint(delta){
+			font-size: 12.5px;
+		}
+	}
+	span{
+		color: $mid-grey;
+	}
+	a{
+		min-width: 135px;
+		display: inline-block;
+		color: $color-gold;
+		border: 1px solid $color-gold;
+		@include transition(all 0.5s);
+
+		@include breakpoint(alpha){
+			min-width: 120px;
+		}
+		@include breakpoint(beta){
+			min-width: 110px;
+		}
+		@include breakpoint(gamma){
+			min-width: 100px;
+		}
+		@include breakpoint(delta){
+			min-width: 90px;
+		}
+
+		&.active,
+		&:hover{
+			color: $color-white;
+			background-color: $color-gold;
+		}
+	}
+
+	&.img-pills{
+		a{
+			border: none;
+			@include breakpoint(delta){
+				max-width: 100px;
+			}
+			&.hover,
+			&.active{
+				background-color: transparent;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+.swiper-container-custom{
+	.swiper-slide{
+		@include transition(all 0.4s);
+		z-index: 1;
+		height: 560px;
+
+		@include breakpoint(alpha){
+			height: 450px;
+		}
+		@include breakpoint(beta){
+			height: 380px;
+		}
+		@include breakpoint(gamma){
+			height: 350px;
+		}
+		@include breakpoint(delta){
+			height: 300px;
+		}
+
+		&.swiper-slide-active{
+			@include transform(scale(1.3));
+			@include breakpoint(gamma){
+				@include transform(none);
+			}
+			img{
+				// height: 100%;
+			}
+		}
+
+		img{
+			@include centerer(true, true);
+			position: absolute;
+			// top: 50%;
+			height: 70%;
+			width: auto;
+			margin: 0 auto;
+
+			@include breakpoint(gamma){
+				height: 100%;
+			}
+		}
+	}
+
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	position: absolute;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 25px solid $light-blue;
+  }
+
+.swiper-button-prev.custom-button-prev,
+.swiper-button-next.custom-button-next {
+	background: none;
+	
+	i{
+		font-size: 40px;
+		color: $color-gold;
+	}
+}
+
+.title-box{
+	h3{
+		margin-bottom: 15px;
+	}
+	h2{
+		margin-bottom: 35px;
+
+		@include breakpoint(alpha){
+			margin-bottom: 30px;
+		}
+		@include breakpoint(beta){
+			margin-bottom: 25px;
+		}
+		@include breakpoint(gamma){
+			margin-bottom: 20px;
+		}
+		@include breakpoint(delta){
+			margin-bottom: 15px;
+		}
+		
+	}
+}
+
+.product-img-col{
+	@include breakpoint(alpha){
+		margin-bottom: 10px;
+	}
+}
+
+.product-info{
+	position: relative;
+
+	.arrow-up{
+		top: -25px;
+		left: 50%;
+		@include transform(translateX(-50%));
+	}
+}
+
+.product-text{
+	@include breakpoint(gamma){
+		margin-bottom: 15px;
+	}
+
+	p{
+		font-family: 'Montserrat-Regular';
+		font-size: 29.17px;
+		margin-bottom: 25px;
+		text-align: left;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+		@include breakpoint(beta){
+			font-size: 22px;
+			margin-bottom: 18px;
+		}
+		@include breakpoint(gamma){
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+		@include breakpoint(delta){
+			font-size: 16px;
+		}
+	}
+}
+
+.product-item{
+	padding: 0;
+	width: 30%;
+	margin: 0 1.5%;
+	position: relative;
+
+	img{
+		width: 100%;
+		height: 100%;
+	}
+
+	i{
+		color: $color-white;
+		width: 30px;
+		height: 28px;
+		background-color: $color-gold;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		@include breakpoint(delta){
+			width: 25px;
+			height: 22px;
+			font-size: 23px;
+		}
+	}
+}
+
+.product-table{
+	
+	@include breakpoint(gamma){
+		margin-bottom: 15px;
+	}
+
+	span, p, li{
+		font-family: 'Montserrat-Regular';
+		font-size: 29.17px;
+		width: 100%;
+		color: $color-white;
+		height: 50px;
+		line-height: 50px;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+			height: 45px;
+			line-height: 45px;
+		}
+		@include breakpoint(beta){
+			font-size: 22px;
+			height: 40px;
+			line-height: 40px;
+		}
+		@include breakpoint(gamma){
+			font-size: 20px;
+			height: 35px;
+			line-height: 35px;
+		}
+		@include breakpoint(delta){
+			font-size: 16px;
+			height: 25px;
+			line-height: 25px;
+		}		
+	}
+
+	span{
+		background-color: $color-gold;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	p{
+		background-color: $dark-blue;
+	}
+
+	li{
+		background-color: $color-white;
+		color: $color-black;
+	}
+
+	nav{
+		list-style: none;
+	}
+}
+
+.product-bottom-info{
+	li{
+		list-style: none;
+		font-size: 29.17px;
+		font-family: 'Montserrat-Regular';
+		border-right: 2px solid $color-silver;
+		display: inline-block;
+		padding: 7px 17px;
+		text-align: left;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+			padding: 5px 15px;
+		}
+		@include breakpoint(beta){
+			font-size: 22px;
+			padding: 4px 13px;
+		}
+		@include breakpoint(gamma){
+			font-size: 20px;
+			padding: 3px 12px;
+		}
+		@include breakpoint(delta){
+			font-size: 16px;
+			padding: 2px 10px;
+		}
+
+		&:last-of-type{
+			border-right: none;
+		}
+
+		p{
+			&:first-of-type{
+				color: $color-gold;
+			}
+		}
+	}
+}
+
+.product-wrapper{
+	margin-bottom: 60px !important;
+
+	@include breakpoint(alpha){
+		margin-bottom: 50px !important;
+	}
+	@include breakpoint(beta){
+		margin-bottom: 40px !important;
+	}
+	@include breakpoint(gamma){
+		margin-bottom: 30px !important;
+	}
+	@include breakpoint(delta){
+		margin-bottom: 20px !important;
+	}
+	
+}
+
+.product-item-wrapper{
+	@include flexbox;
+	@include flex-wrap(wrap);
+}
+
+.product-description{
+	p{
+		font-family: 'Montserrat-Regular';
+		font-size: 29.17px;
+		margin-bottom: 35px;
+		color: $dark-brown;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+			margin-bottom: 30px;
+		}
+		@include breakpoint(beta){
+			font-size: 22px;
+			margin-bottom: 25px;
+		}
+		@include breakpoint(gamma){
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+		@include breakpoint(delta){
+			font-size: 16px;
+			margin-bottom: 18px;
+		}
+	}
+}
+
+.product-all{
+	.more-info{
+		display: none;
+		margin-bottom: 30px;
+
+		@include breakpoint(alpha){
+			margin-bottom: 25px;
+		}
+		@include breakpoint(beta){
+			margin-bottom: 20px;
+		}
+		@include breakpoint(gamma){
+			margin-bottom: 15px;
+		}
+	}
+
+	.product-col{
+		padding: 0;
+		padding-top: 40px;
+		width: 48%;
+		margin: 0 1%;
+		border-bottom: 1px solid $mid-grey;
+
+		@include breakpoint(alpha){
+			padding-top: 35px;
+		}
+		@include breakpoint(beta){
+			padding-top: 30px;
+		}
+		@include breakpoint(gamma){
+			padding-top: 25px;
+			margin: 0;
+			width: 100%;
+		}
+		@include breakpoint(delta){
+			padding-top: 20px;
+		}
+	}
+
+	.product-header{
+		text-align: left;
+
+		&.shop-header{
+			h2{
+				display: block;
+				text-align: left;
+				color: $color-gold;
+				margin-bottom: 15px;
+
+				@include breakpoint(beta){
+					margin-bottom: 12px;
+				}
+				@include breakpoint(gamma){
+					margin-bottom: 15px;
+				}
+				@include breakpoint(delta){
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		h2{
+			display: inline;
+			font-size: 37.5px;
+
+			@include breakpoint(alpha){
+				font-size: 35px;
+			}
+			@include breakpoint(beta){
+				font-size: 32px;
+			}
+			@include breakpoint(gamma){
+				font-size: 30px;
+			}
+			@include breakpoint(delta){
+				font-size: 27px;
+			}
+		}
+		span{
+			font-size: 25px;
+			font-family: 'Anton-Regular';
+			color: $color-gold;
+			padding-left: 5px;
+			text-transform: uppercase;
+
+			@include breakpoint(alpha){
+				font-size: 23px;
+			}
+			@include breakpoint(beta){
+				font-size: 21px;
+			}
+			@include breakpoint(gamma){
+				font-size: 18px;
+			}
+			@include breakpoint(delta){
+				font-size: 15px;
+			}
+		}
+	}
+
+	span, a{
+		text-transform: uppercase;
+		font-size: 30px;
+		@include breakpoint(alpha){
+			font-size: 27px;
+		}
+		@include breakpoint(beta){
+			font-size: 25px;
+		}
+		@include breakpoint(gamma){
+			font-size: 23px;
+		}
+		@include breakpoint(delta){
+			font-size: 19px;
+		}
+	}
+
+	a{
+		color: $color-black;
+		font-weight: 600;
+	}
+
+	.product-text-col{
+		text-align: left;
+	}
+
+	.product-text{
+		text-align: left;
+		margin-bottom: 30px;
+
+		@include breakpoint(alpha){
+			margin-bottom: 25px;
+		}
+		@include breakpoint(beta){
+			margin-bottom: 20px;
+		}
+		@include breakpoint(gamma){
+			margin-bottom: 15px;
+		}
+		@include breakpoint(delta){
+			margin-bottom: 12px;
+		}
+		p{
+			display: inline;
+		}
+	}
+
+	.product-table{
+		margin-bottom: 40px;
+		text-align: center;
+
+		@include breakpoint(alpha){
+			margin-bottom: 25px;
+		}
+		@include breakpoint(beta){
+			margin-bottom: 20px;
+		}
+		@include breakpoint(gamma){
+			margin-bottom: 15px;
+		}
+		@include breakpoint(delta){
+			margin-bottom: 12px;
+		}
+	}
+	.product-bottom-info{
+		text-align: left;
+		margin-bottom: 30px;
+
+		@include breakpoint(alpha){
+			margin-bottom: 25px;
+		}
+		@include breakpoint(beta){
+			margin-bottom: 20px;
+		}
+		@include breakpoint(gamma){
+			margin-bottom: 15px;
+		}
+		@include breakpoint(delta){
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.info-box-lg{
+	padding: 25px 0;
+
+	@include breakpoint(alpha){
+		padding: 20px 0;
+	}
+	@include breakpoint(beta){
+		padding: 18px 0;
+	}
+	@include breakpoint(gamma){
+		padding: 15px 0;
+	}
+	@include breakpoint(delta){
+		padding: 12px 0;
+	}
+
+	.info-box-item{
+		@include flexbox;
+		@include align-items(center);
+		padding: 25px 0;
+
+		@include breakpoint(alpha){
+			padding: 20px 0;
+		}
+		@include breakpoint(beta){
+			padding: 18px 0;
+		}
+		@include breakpoint(gamma){
+			padding: 16px 0;
+			display: block;
+		}
+		@include breakpoint(delta){
+			padding: 14px 0;
+		}
+
+		.info-box-img{
+			position: relative;
+
+			@include breakpoint(gamma){
+				margin-bottom: 15px;
+			}
+
+			.date-box{
+				position: absolute;
+				top: 0;
+				left: 10%;
+				color: $color-white;
+				padding: 30px 20px;
+
+				@include breakpoint(alpha){
+					padding: 25px 17px;
+				}
+				@include breakpoint(beta){
+					padding: 22px 14px;
+				}
+				@include breakpoint(gamma){
+					padding: 19px 14px;
+					left: 20%;
+				}
+				@include breakpoint(delta){
+					padding: 15px 10px;
+					left: 10%;
+				}
+
+				h3{
+					color: $color-white;
+					font-size: 44.5px;
+					font-family: 'Anton-Regular';
+
+					@include breakpoint(alpha){
+						font-size: 37px;
+					}
+					@include breakpoint(beta){
+						font-size: 29px;
+					}
+					@include breakpoint(delta){
+						font-size: 26px;
+					}
+				}
+
+				h2{
+					color: $color-white;
+					font-size: 72px;
+					font-family: 'Anton-Regular';
+					border-bottom: 5px solid;
+					margin-bottom: 10px;
+
+					@include breakpoint(alpha){
+						font-size: 62px;
+					}
+					@include breakpoint(beta){
+						font-size: 52px;
+					}
+					@include breakpoint(gamma){
+						margin-bottom: 8px;
+					}
+					@include breakpoint(delta){
+						font-size: 47px;
+						margin-bottom: 6px;
+					}
+				}
+
+				h4{
+					color: $color-white;
+					font-size: 33.36px;
+					font-family: 'Anton-Regular';
+
+					@include breakpoint(alpha){
+						font-size: 27px;
+					}
+					@include breakpoint(beta){
+						font-size: 22px;
+					}
+					@include breakpoint(delta){
+						font-size: 19px;
+					}
+				}
+
+				&.dark-blue{
+					background-color: $dark-blue;
+				}
+				&.gold-bg{
+					background-color: $color-gold;
+				}
+			}
+		}
+
+		.info-box-text{
+			text-align: left;
+			h3{
+				font-family: 'Anton-Regular';
+				font-size: 37.5px;
+				margin-bottom: 20px;
+				text-align: left;
+
+				@include breakpoint(alpha){
+					font-size: 34px;
+					margin-bottom: 17px;
+				}
+				@include breakpoint(beta){
+					font-size: 30px;
+					margin-bottom: 15px;
+				}
+				@include breakpoint(gamma){
+					font-size: 27px;
+				}
+				@include breakpoint(delta){
+					font-size: 25px;
+					margin-bottom: 12px;
+				}
+			}
+
+			p, span{
+				font-size: 29.17px;
+				font-family: 'Montserrat-Regular';
+				display: inline;
+
+				@include breakpoint(alpha){
+					font-size: 26px;
+				}
+				@include breakpoint(beta){
+					font-size: 24px;
+				}
+				@include breakpoint(gamma){
+					font-size: 21px;
+				}
+				@include breakpoint(delta){
+					font-size: 18px;
+				}
+			}
+
+			span{
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.custom-text-style{
+	width: 90%;
+	h4{
+		font-family: 'Anton-Regular';
+		font-size: 50px;
+		color: $color-white;
+
+		@include breakpoint(alpha){
+			font-size: 45px;
+		}
+		@include breakpoint(beta){
+			font-size: 41px;
+		}
+		@include breakpoint(gamma){
+			font-size: 36px;
+		}
+		@include breakpoint(delta){
+			font-size: 32px;
+		}
+	}
+
+	p, a{
+		font-family: 'Montserrat-Regular';
+		font-size: 29.17px;
+		color: $color-white;
+		text-transform: uppercase;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+		}
+		@include breakpoint(beta){
+			font-size: 22px;
+		}
+		@include breakpoint(gamma){
+			font-size: 19px;
+		}
+		@include breakpoint(delta){
+			font-size: 15px;
+		}
+	}
+}
+
+.load-more-box{
+	padding: 40px 0px;
+
+	@include breakpoint(alpha){
+		padding: 35px 0;
+	}
+	@include breakpoint(beta){
+		padding: 32px 0;
+	}
+	@include breakpoint(gamma){
+		padding: 29px 0;
+	}
+	@include breakpoint(delta){
+		padding: 26px 0;
+	}
+
+	i,p{
+		color: $mid-grey;
+	}
+
+	i{
+		font-size: 45px;
+		margin-bottom: 15px;
+
+		@include breakpoint(alpha){
+			font-size: 42px;
+			margin-bottom: 12px;
+		}
+		@include breakpoint(beta){
+			font-size: 40px;
+		}
+		@include breakpoint(gamma){
+			font-size: 37px;
+			margin-bottom: 10px;
+		}
+		@include breakpoint(delta){
+			font-size: 35px;
+		}
+	}
+
+	p{
+		font-size: 29.17px;
+		font-family: 'Anton-Regular';		
+		text-transform: uppercase;
+		letter-spacing: 3px;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+		}
+		@include breakpoint(beta){
+			font-size: 22px;
+		}
+		@include breakpoint(gamma){
+			font-size: 19px;
+		}
+		@include breakpoint(delta){
+			font-size: 15px;
+		}
+	}
+}
+
+.form-wrapper{
+	margin: 0 auto;
+	padding: 0 15%;
+
+	h2{
+		margin-bottom: 55px;
+
+		@include breakpoint(alpha){
+			margin-bottom: 40px;
+		}
+		@include breakpoint(beta){
+			margin-bottom: 35px;
+		}
+		@include breakpoint(gamma){
+			margin-bottom: 22px;
+		}
+		@include breakpoint(delta){
+			margin-bottom: 15px;
+		}
+	}
+
+	p{
+		font-size: 29.17px;
+		font-family: 'Montserrat-Regular';
+		margin-bottom: 70px;
+		line-height: 40px;
+		text-align: left;
+
+		@include breakpoint(alpha){
+			font-size: 25px;
+			margin-bottom: 50px;
+			line-height: 35px;
+		}
+		@include breakpoint(beta){
+			font-size: 22px;
+			margin-bottom: 40px;
+			line-height: 30px;
+		}
+		@include breakpoint(gamma){
+			font-size: 19px;
+			margin-bottom: 30px;
+			line-height: 25px;
+		}
+		@include breakpoint(delta){
+			font-size: 15px;
+			margin-bottom: 20px;
+			line-height: 20px;
+		}
+	}
+
+	form{
+		text-align: left;
+		display: block;
+		input, textarea{
+			width: 100%;
+			border: 1px solid $mid-grey;
+			@include border-radius(5px);
+			margin-bottom: 20px;
+			height: 70px;
+			line-height: 1;
+			font-size: 25px;
+			padding: 0 10px;
+
+			@include breakpoint(alpha){
+				font-size: 22px;
+				margin-bottom: 15px;
+				height: 60px;
+				line-height: 60px;
+			}
+			@include breakpoint(beta){
+				@include border-radius(4px);
+				font-size: 20px;
+				margin-bottom: 12px;
+				height: 50px;
+				line-height: 50px;
+			}
+			@include breakpoint(gamma){
+				@include border-radius(3px);
+				font-size: 18px;
+				margin-bottom: 10px;
+				height: 40px;
+				line-height: 40px;
+			}
+			@include breakpoint(delta){
+				font-size: 15px;
+				height: 30px;
+				line-height: 30px;
+			}			
+		}
+
+		textarea{
+			height: 270px;
+			padding: 10px;
+
+			@include breakpoint(alpha){
+				height: 240px;
+				padding: 8px;
+			}
+			@include breakpoint(beta){
+				height: 200px;
+				padding: 6px;
+			}
+			@include breakpoint(gamma){
+				height: 180px;
+			}
+			@include breakpoint(delta){
+				height: 140px;
+			}
+		}
+
+		.border-box{
+			margin-left: 50%;
+			@include transform(translateX(-50%));
+
+			input{
+				@include border-radius(0px);				
+				margin: 0;
+				border: none;
+				font-size: 33.33px;
+				text-transform: uppercase;
+				letter-spacing: 0px;
+				font-family: 'Anton-Regular';
+
+				@include breakpoint(alpha){
+					font-size: 30px;
+				}
+				@include breakpoint(beta){
+					font-size: 27px;
+				}
+				@include breakpoint(gamma){
+					font-size: 25px;
+				}
+				@include breakpoint(delta){
+					font-size: 22px;
+				}
+			}
+		}
+	}
+
+	.submit-msg{
+		display: none;
+		padding-top: 60px;
+
+		@include breakpoint(alpha){
+			padding-top: 50px;
+		}
+		@include breakpoint(beta){
+			padding-top: 40px;
+		}
+		@include breakpoint(gamma){
+			padding-top: 30px;
+		}
+		@include breakpoint(delta){
+			padding-top: 25px;
+		}
+		
+		p{
+			text-align: center;		
+		}
+
+		h3{
+			letter-spacing: 15px;
+			font-family: 'Anton-Regular';
+			margin-bottom: 50px;
+			font-size: 41.67px;
+
+			@include breakpoint(alpha){
+				font-size: 37px;
+				margin-bottom: 40px;
+			}
+			@include breakpoint(beta){
+				font-size: 34px;
+				margin-bottom: 35px;
+			}
+			@include breakpoint(gamma){
+				font-size: 30px;
+				margin-bottom: 22px;
+				letter-spacing: 10px;
+			}
+			@include breakpoint(delta){
+				font-size: 25px;
+				margin-bottom: 15px;
+				letter-spacing: 5px;
+			}
+		}
+	}
+}
+
+.terms-privacy-text{
+	p{
+		font-family: 'Montserrat-Regular';
+		font-size: 20.83px;
+		margin-bottom: 30px;
+		
+		@include breakpoint(alpha){
+			font-size: 18px;
+			margin-bottom: 25px;
+		}
+		@include breakpoint(beta){
+			font-size: 16px;
+			margin-bottom: 22px;
+		}
+		@include breakpoint(gamma){
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		@include breakpoint(delta){
+			font-size: 12.5px;
+			margin-bottom: 17px;
+		}
+	}
+}
+
+.close-icon{
+	display: none;
+	width: 60px;
+	height: 60px;
+	position: relative;
+
+	@include breakpoint(gamma){
+		display: block;
+	}
+	.line{
+		display: inline-block;
+		height: 60px;
+		width: 2px;
+		background-color: $color-white;
+		position: absolute;
+		left: 50%;
+		&.first{
+			@include transform(rotate(45deg))
+		}
+		&.second{
+			@include transform(rotate(-45deg))
+		}
+	}
+}

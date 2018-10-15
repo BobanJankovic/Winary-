@@ -1,0 +1,48 @@
+
+/************************************************************************************************
+	
+	GUIDE FOR UNDERSTANDING THIS CSS NOTATION
+
+	THIS FILES ARE USING BEM NOTATION
+	
+	FOR EXAMPLE :
+
+	THIS IS BLOCK COMPONENT
+	.menu {}
+
+	ELEMENT THAT DEPENDS UPON THE BLOCK
+	.menu__item{}
+
+	MODIFIER THAT CHANGES THE STYLE OF THE BLOCK
+	.menu--big {}
+	.menu--orange{}
+
+	.menu__item--hidden{}
+	
+************************************************************************************************/
+
+/************************************************************************************************
+	
+	GUIDE FOR MEDIA QUERIES
+
+	Take a look in the scss/base/_mixin.scss to see how to name different screen widths
+	or to change the values for the breakpoints
+
+************************************************************************************************/
+
+/************************************************************************************************
+	
+	GUIDE FOR USING SASS
+
+	@extend(s) are listed first
+	@include(s) are listed next
+	"Regular" styles are next
+	Nester pseudo classes and pseudo elements next
+	Nested selectors last
+
+	Maximum nesting is 3 levels deep!!!
+
+	And max 50 lines of code in the nested block
+
+************************************************************************************************/
+
