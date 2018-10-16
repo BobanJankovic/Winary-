@@ -8735,7 +8735,8 @@ p {
       text-transform: uppercase;
       color: #dcae7e;
       cursor: pointer;
-      padding-right: 10px; }
+      padding-right: 3px;
+      padding-left: 3px; }
       .header-nav nav li a {
         color: darkslategray; }
         @media (max-width: 768px) {
